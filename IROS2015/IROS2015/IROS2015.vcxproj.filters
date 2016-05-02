@@ -212,5 +212,8 @@
     <ClCompile Include="..\..\..\libraries\Planning\RAGS.cpp">
       <Filter>Header Files\Planning</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\libraries\Planning\GridGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

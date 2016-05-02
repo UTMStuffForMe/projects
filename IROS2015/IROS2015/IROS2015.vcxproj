@@ -131,6 +131,7 @@
     <ClCompile Include="..\..\..\libraries\Multiagent\IMultiagentSystem.cpp" />
     <ClCompile Include="..\..\..\libraries\Multiagent\MultiagentNE.cpp" />
     <ClCompile Include="..\..\..\libraries\Multiagent\MultiagentTypeNE.cpp" />
+    <ClCompile Include="..\..\..\libraries\Planning\GridGraph.cpp" />
     <ClCompile Include="..\..\..\libraries\Planning\RAGS.cpp" />
     <ClCompile Include="..\..\..\libraries\Planning\SectorGraphManager.cpp" />
     <ClCompile Include="..\..\..\libraries\Planning\TypeGraphManager.cpp" />

@@ -171,7 +171,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 int main() {
 #endif
     loopOverRewardTypes();
-    // detailedSim();
+    //detailedSim();
     _CrtDumpMemoryLeaks();  // memory leak checking
     std::system("pause");
     return 0;
