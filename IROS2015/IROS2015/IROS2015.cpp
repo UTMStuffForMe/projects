@@ -134,10 +134,19 @@ void rwdChanger(UTMModes* modes, int rwd) {
     modes->_reward_mode = UTMModes::RewardMode(rwd);
 }
 
+void domainChanger(UTMModes* modes, int domain_num) {
+    modes->domain_num = domain_num;
+}
 
 void loopOverRewardTypes() {
     UTMModes* params = new UTMModes();
     loopOverDomainParameters(rwdChanger, 1, params);
+    delete params;
+}
+
+void loopOverDomains(int n_domains) {
+    UTMModes* params = new UTMModes();
+    loopOverDomainParameters(domainChanger, n_domains, params);
     delete params;
 }
 
@@ -165,12 +174,36 @@ void detailedSim() {
     delete modes;
 }
 
+
+void generateNewDomains(int n_domains) {
+    UTMModes* params = new UTMModes();
+    UTMFileNames* filehandler = new UTMFileNames(params);
+    int n_sectors = params->get_n_sectors();
+    int n_types = params->get_n_types();
+
+    for (int i = 0; i < n_domains; i++) {
+        // Generate a new airspace
+        params->domain_num = i;
+        std::string domain_dir = filehandler->createDomainDirectory();
+        TypeGraphManager* highGraph = new TypeGraphManager(n_sectors, n_types, 200.0, 200.0);
+        highGraph->print_graph(domain_dir);  // saves the graph
+        delete highGraph;
+    }
+    delete filehandler;
+    delete params;
+}
+
+
 #ifdef _WIN32
 int _tmain(int argc, _TCHAR* argv[]) {
 #else
 int main() {
 #endif
-    loopOverRewardTypes();
+    int n_domains = 1;
+    //int n_domains = 100;
+    //generateNewDomains(n_domains);
+    loopOverDomains(n_domains);
+    //loopOverRewardTypes();
     //detailedSim();
     _CrtDumpMemoryLeaks();  // memory leak checking
     std::system("pause");

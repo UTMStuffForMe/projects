@@ -129,6 +129,9 @@
     <ClInclude Include="..\..\..\libraries\Domains\UTM\IAgentManager.h">
       <Filter>Header Files\Learning</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Source\Repos\libraries\Planning\Graph.h">
+      <Filter>Header Files\Planning</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -212,8 +215,8 @@
     <ClCompile Include="..\..\..\libraries\Planning\RAGS.cpp">
       <Filter>Header Files\Planning</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\libraries\Planning\GridGraph.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\..\libraries\Planning\LinkGraph.cpp">
+      <Filter>Header Files\Planning</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

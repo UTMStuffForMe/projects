@@ -53,11 +53,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files\boost_1_55_0;C:\Program Files\boost_1_60_0;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0\stage\lib;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0;C:\Program Files\boost_1_55_0;C:\Program Files\boost_1_60_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -83,6 +84,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\Source\Repos\libraries\Planning\Graph.h" />
     <ClInclude Include="..\..\..\libraries\Domains\IDomainStateful.h" />
     <ClInclude Include="..\..\..\libraries\Domains\UTM\Fix.h" />
     <ClInclude Include="..\..\..\libraries\Domains\UTM\Link.h" />
@@ -131,7 +133,7 @@
     <ClCompile Include="..\..\..\libraries\Multiagent\IMultiagentSystem.cpp" />
     <ClCompile Include="..\..\..\libraries\Multiagent\MultiagentNE.cpp" />
     <ClCompile Include="..\..\..\libraries\Multiagent\MultiagentTypeNE.cpp" />
-    <ClCompile Include="..\..\..\libraries\Planning\GridGraph.cpp" />
+    <ClCompile Include="..\..\..\libraries\Planning\LinkGraph.cpp" />
     <ClCompile Include="..\..\..\libraries\Planning\RAGS.cpp" />
     <ClCompile Include="..\..\..\libraries\Planning\SectorGraphManager.cpp" />
     <ClCompile Include="..\..\..\libraries\Planning\TypeGraphManager.cpp" />
