@@ -75,9 +75,6 @@
     <ClInclude Include="..\..\..\libraries\Domains\UTM\UTMDomainAbstract.h">
       <Filter>Header Files\Domain</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\libraries\Domains\UTM\UTMDomainDetail.h">
-      <Filter>Header Files\Domain</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\libraries\Simulation\SimNE.h">
       <Filter>Header Files\Simulation</Filter>
     </ClInclude>
@@ -94,12 +91,6 @@
       <Filter>Header Files\Assistants</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\libraries\Planning\LinkGraph.h">
-      <Filter>Header Files\Planning</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\libraries\Planning\SectorGraphManager.h">
-      <Filter>Header Files\Planning</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\libraries\Planning\TypeGraphmanager.h">
       <Filter>Header Files\Planning</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\libraries\Planning\GridGraph.h">
@@ -129,7 +120,22 @@
     <ClInclude Include="..\..\..\libraries\Domains\UTM\IAgentManager.h">
       <Filter>Header Files\Learning</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Source\Repos\libraries\Planning\Graph.h">
+    <ClInclude Include="..\..\..\libraries\Domains\UTM\Detail\FixDetail.h">
+      <Filter>Header Files\Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libraries\Domains\UTM\Detail\UAVDetail.h">
+      <Filter>Header Files\Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libraries\Domains\UTM\Detail\UTMDomainDetail.h">
+      <Filter>Header Files\Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libraries\Planning\IBoostGraph.h">
+      <Filter>Header Files\Planning</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libraries\Planning\MultiGraph.h">
+      <Filter>Header Files\Planning</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libraries\Planning\Planning.h">
       <Filter>Header Files\Planning</Filter>
     </ClInclude>
   </ItemGroup>
@@ -182,18 +188,6 @@
     <ClCompile Include="..\..\..\libraries\Domains\UTM\UTMDomainAbstract.cpp">
       <Filter>Header Files\Domain</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\libraries\Domains\UTM\UTMDomainDetail.cpp">
-      <Filter>Header Files\Domain</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\libraries\Planning\SectorGraphManager.cpp">
-      <Filter>Header Files\Planning</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\libraries\Planning\TypeGraphManager.cpp">
-      <Filter>Header Files\Planning</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\libraries\Domains\UTM\UTMModesAndFiles.cpp">
-      <Filter>Header Files\Domain</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\libraries\Math\MatrixTypes.cpp">
       <Filter>Header Files\Assistants</Filter>
     </ClCompile>
@@ -216,6 +210,18 @@
       <Filter>Header Files\Planning</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\libraries\Planning\LinkGraph.cpp">
+      <Filter>Header Files\Planning</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\libraries\Domains\UTM\Detail\FixDetail.cpp">
+      <Filter>Header Files\Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\libraries\Domains\UTM\Detail\UAVDetail.cpp">
+      <Filter>Header Files\Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\libraries\Domains\UTM\Detail\UTMDomainDetail.cpp">
+      <Filter>Header Files\Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\libraries\Planning\GridGraph.cpp">
       <Filter>Header Files\Planning</Filter>
     </ClCompile>
   </ItemGroup>

@@ -37,7 +37,7 @@
 
 // Project-specific includes
 #include "../../../libraries/Simulation/SimTypeNE.h"
-#include "../../../libraries/Domains/UTM/UTMDomainDetail.h"
+#include "../../../libraries/Domains/UTM/Detail/UTMDomainDetail.h"
 #include "../../../libraries/Domains/UTM/UTMDomainAbstract.h"
 
 using std::vector;
@@ -174,7 +174,7 @@ void detailedSim() {
     delete modes;
 }
 
-
+/*
 void generateNewDomains(int n_domains) {
     UTMModes* params = new UTMModes();
     UTMFileNames* filehandler = new UTMFileNames(params);
@@ -191,7 +191,7 @@ void generateNewDomains(int n_domains) {
     }
     delete filehandler;
     delete params;
-}
+}*/
 
 
 #ifdef _WIN32
@@ -199,7 +199,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 #else
 int main() {
 #endif
-    int n_domains = 1;
+   int n_domains = 1;
     //int n_domains = 100;
     //generateNewDomains(n_domains);
     loopOverDomains(n_domains);
