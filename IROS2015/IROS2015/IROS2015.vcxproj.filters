@@ -39,9 +39,6 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvoTypeWeighted.h">
-      <Filter>Header Files\Learning</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvo.h">
       <Filter>Header Files\Learning</Filter>
     </ClInclude>
@@ -49,9 +46,6 @@
       <Filter>Header Files\Learning</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\libraries\Multiagent\MultiagentNE.h">
-      <Filter>Header Files\Learning</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\libraries\Multiagent\MultiagentTypeNE.h">
       <Filter>Header Files\Learning</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\libraries\Domains\UTM\Fix.h">
@@ -63,12 +57,6 @@
     <ClInclude Include="..\..\..\libraries\Domains\UTM\Sector.h">
       <Filter>Header Files\Domain</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\libraries\SingleAgent\NeuralNet\TypeNeuralNet.h">
-      <Filter>Header Files\Learning</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\libraries\SingleAgent\NeuroEvo\TypeNeuroEvo.h">
-      <Filter>Header Files\Learning</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\libraries\Domains\UTM\UAV.h">
       <Filter>Header Files\Domain</Filter>
     </ClInclude>
@@ -76,9 +64,6 @@
       <Filter>Header Files\Domain</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\libraries\Simulation\SimNE.h">
-      <Filter>Header Files\Simulation</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\libraries\Simulation\SimTypeNE.h">
       <Filter>Header Files\Simulation</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\libraries\SingleAgent\IAgent.h">
@@ -101,9 +86,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\libraries\Math\MatrixTypes.h">
       <Filter>Header Files\Assistants</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvoTypeCrossweighted.h">
-      <Filter>Header Files\Learning</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\libraries\Domains\UTM\Link.h">
       <Filter>Header Files\Domain</Filter>
@@ -138,6 +120,12 @@
     <ClInclude Include="..\..\..\libraries\Planning\Planning.h">
       <Filter>Header Files\Planning</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\libraries\SingleAgent\Evolution.h">
+      <Filter>Header Files\Learning</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libraries\SingleAgent\IPolicy.h">
+      <Filter>Header Files\Learning</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -152,9 +140,6 @@
     <ClCompile Include="..\..\..\libraries\Domains\UTM\Fix.cpp">
       <Filter>Header Files\Domain</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\libraries\SingleAgent\IAgent.cpp">
-      <Filter>Header Files\Learning</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\libraries\Domains\IDomainStateful.cpp">
       <Filter>Header Files\Domain</Filter>
     </ClCompile>
@@ -164,23 +149,14 @@
     <ClCompile Include="..\..\..\libraries\Multiagent\MultiagentNE.cpp">
       <Filter>Header Files\Learning</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\libraries\Multiagent\MultiagentTypeNE.cpp">
-      <Filter>Header Files\Learning</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\libraries\SingleAgent\NeuralNet\NeuralNet.cpp">
       <Filter>Header Files\Learning</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvo.cpp">
       <Filter>Header Files\Learning</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvoTypeWeighted.cpp">
-      <Filter>Header Files\Learning</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\libraries\Domains\UTM\Sector.cpp">
       <Filter>Header Files\Domain</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\libraries\SingleAgent\NeuroEvo\TypeNeuroEvo.cpp">
-      <Filter>Header Files\Learning</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\libraries\Domains\UTM\UAV.cpp">
       <Filter>Header Files\Domain</Filter>
@@ -194,16 +170,10 @@
     <ClCompile Include="..\..\..\libraries\Domains\UTM\Link.cpp">
       <Filter>Header Files\Domain</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvoTypeCrossweighted.cpp">
-      <Filter>Header Files\Learning</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\libraries\Domains\UTM\IAgentManager.cpp">
       <Filter>Header Files\Learning</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\libraries\Simulation\SimNE.cpp">
-      <Filter>Header Files\Simulation</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\libraries\Simulation\SimTypeNE.cpp">
       <Filter>Header Files\Simulation</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\libraries\Planning\RAGS.cpp">

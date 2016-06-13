@@ -36,9 +36,10 @@
 #include <vector>
 
 // Project-specific includes
-#include "../../../libraries/Simulation/SimTypeNE.h"
-#include "../../../libraries/Domains/UTM/Detail/UTMDomainDetail.h"
-#include "../../../libraries/Domains/UTM/UTMDomainAbstract.h"
+//#include "../../../libraries/Simulation/SimTypeNE.h"
+#include "Simulation/SimNE.h"
+#include "Domains/UTM/Detail/UTMDomainDetail.h"
+#include "Domains/UTM/UTMDomainAbstract.h"
 
 using std::vector;
 
@@ -94,21 +95,18 @@ vector<int> consecutive(int a, int b) {
 void abstract_UTM_simulation(UTMModes* modes, int r) {
     UTMDomainAbstract* domain = new UTMDomainAbstract(modes);
 
-    int n_inputs = domain->n_state_elements;        // # nn inputs
-    int n_outputs = domain->n_control_elements;     // # nn outputs
+    size_t n_inputs = domain->n_state_elements;        // # nn inputs
+    size_t n_outputs = domain->n_control_elements;     // # nn outputs
     NeuroEvoParameters* NE_params;
     NE_params = new NeuroEvoParameters(n_inputs, n_outputs);
 
-    MultiagentTypeNE* MAS;
-    int n_agents = domain->n_agents;
-    int n_types = domain->n_types;
-    MultiagentTypeNE::TypeHandling mode = MultiagentTypeNE::BLIND;
-    MAS = new MultiagentTypeNE(n_agents, NE_params, mode, n_types);
+    size_t n_agents = domain->n_agents;
+    MultiagentNE* MAS = new MultiagentNE(n_agents, NE_params);
 
-    SimTypeNE sim(domain, MAS, MultiagentTypeNE::BLIND);
+    SimNE sim(domain, MAS);
     sim.runExperiment();
 
-    sim.outputMetricLog(MAS->type_file_name(), r);
+    sim.outputMetricLog("metrics.csv", r);
 
     delete domain;
     delete NE_params;
@@ -149,7 +147,7 @@ void loopOverDomains(int n_domains) {
     loopOverDomainParameters(domainChanger, n_domains, params);
     delete params;
 }
-
+/*
 void detailedSim() {
     srand(size_t(time(NULL)));
     UTMModes* modes = new UTMModes();
@@ -172,7 +170,7 @@ void detailedSim() {
     sim.outputMetricLog("detailsim.csv");
     delete domain;
     delete modes;
-}
+}*/
 
 /*
 void generateNewDomains(int n_domains) {
@@ -195,7 +193,7 @@ void generateNewDomains(int n_domains) {
 
 
 #ifdef _WIN32
-int _tmain(int argc, _TCHAR* argv[]) {
+int _tmain(int, _TCHAR*) {
 #else
 int main() {
 #endif

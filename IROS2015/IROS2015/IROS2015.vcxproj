@@ -49,35 +49,37 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0\stage\lib;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0;C:\Program Files\boost_1_55_0;C:\Program Files\boost_1_60_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Carrie\Source\Repos\libraries;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0\stage\lib;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0;C:\Program Files\boost_1_55_0;C:\Program Files\boost_1_60_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files\boost_1_60_0\stage\lib;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0;C:\Program Files\boost_1_60_0;C:\Program Files\boost_1_55_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Carrie\Source\Repos\libraries;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0;C:\Program Files\boost_1_60_0;C:\Program Files\boost_1_55_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OpenMPSupport>true</OpenMPSupport>
+      <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Program Files\boost_1_60_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -100,7 +102,6 @@
     <ClInclude Include="..\..\..\libraries\Math\XY.h" />
     <ClInclude Include="..\..\..\libraries\Multiagent\IMultiagentSystem.h" />
     <ClInclude Include="..\..\..\libraries\Multiagent\MultiagentNE.h" />
-    <ClInclude Include="..\..\..\libraries\Multiagent\MultiagentTypeNE.h" />
     <ClInclude Include="..\..\..\libraries\Planning\GridGraph.h" />
     <ClInclude Include="..\..\..\libraries\Planning\IBoostGraph.h" />
     <ClInclude Include="..\..\..\libraries\Planning\LinkGraph.h" />
@@ -108,14 +109,11 @@
     <ClInclude Include="..\..\..\libraries\Planning\Planning.h" />
     <ClInclude Include="..\..\..\libraries\Planning\RAGS.h" />
     <ClInclude Include="..\..\..\libraries\Simulation\SimNE.h" />
-    <ClInclude Include="..\..\..\libraries\Simulation\SimTypeNE.h" />
+    <ClInclude Include="..\..\..\libraries\SingleAgent\Evolution.h" />
     <ClInclude Include="..\..\..\libraries\SingleAgent\IAgent.h" />
+    <ClInclude Include="..\..\..\libraries\SingleAgent\IPolicy.h" />
     <ClInclude Include="..\..\..\libraries\SingleAgent\NeuralNet\NeuralNet.h" />
-    <ClInclude Include="..\..\..\libraries\SingleAgent\NeuralNet\TypeNeuralNet.h" />
     <ClInclude Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvo.h" />
-    <ClInclude Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvoTypeCrossweighted.h" />
-    <ClInclude Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvoTypeWeighted.h" />
-    <ClInclude Include="..\..\..\libraries\SingleAgent\NeuroEvo\TypeNeuroEvo.h" />
     <ClInclude Include="..\..\..\libraries\STL\easystl.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -135,18 +133,12 @@
     <ClCompile Include="..\..\..\libraries\Math\MatrixTypes.cpp" />
     <ClCompile Include="..\..\..\libraries\Multiagent\IMultiagentSystem.cpp" />
     <ClCompile Include="..\..\..\libraries\Multiagent\MultiagentNE.cpp" />
-    <ClCompile Include="..\..\..\libraries\Multiagent\MultiagentTypeNE.cpp" />
     <ClCompile Include="..\..\..\libraries\Planning\GridGraph.cpp" />
     <ClCompile Include="..\..\..\libraries\Planning\LinkGraph.cpp" />
     <ClCompile Include="..\..\..\libraries\Planning\RAGS.cpp" />
     <ClCompile Include="..\..\..\libraries\Simulation\SimNE.cpp" />
-    <ClCompile Include="..\..\..\libraries\Simulation\SimTypeNE.cpp" />
-    <ClCompile Include="..\..\..\libraries\SingleAgent\IAgent.cpp" />
     <ClCompile Include="..\..\..\libraries\SingleAgent\NeuralNet\NeuralNet.cpp" />
     <ClCompile Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvo.cpp" />
-    <ClCompile Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvoTypeCrossweighted.cpp" />
-    <ClCompile Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvoTypeWeighted.cpp" />
-    <ClCompile Include="..\..\..\libraries\SingleAgent\NeuroEvo\TypeNeuroEvo.cpp" />
     <ClCompile Include="IROS2015.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
