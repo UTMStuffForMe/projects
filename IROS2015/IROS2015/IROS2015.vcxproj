@@ -51,14 +51,14 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>EnableAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_SCL_SECURE_NO_WARNINGS;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>C:\Users\Carrie\Source\Repos\libraries;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0\stage\lib;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0;C:\Program Files\boost_1_55_0;C:\Program Files\boost_1_60_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files\boost_1_60_0\stage\lib;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Carrie\Source\Repos\libraries\static_libraries\lib;C:\Program Files\boost_1_60_0\stage\lib;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -72,7 +72,7 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>C:\Users\Carrie\Source\Repos\libraries;C:\Users\Carrie\Documents\Visual Studio 2012\Projects\boost\boost_1_57_0;C:\Program Files\boost_1_60_0;C:\Program Files\boost_1_55_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OpenMPSupport>true</OpenMPSupport>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -97,9 +97,7 @@
     <ClInclude Include="..\..\..\libraries\Domains\UTM\IAgentManager.h" />
     <ClInclude Include="..\..\..\libraries\Domains\UTM\UTMDomainAbstract.h" />
     <ClInclude Include="..\..\..\libraries\Domains\UTM\UTMModesAndFiles.h" />
-    <ClInclude Include="..\..\..\libraries\Math\easymath.h" />
-    <ClInclude Include="..\..\..\libraries\Math\MatrixTypes.h" />
-    <ClInclude Include="..\..\..\libraries\Math\XY.h" />
+    <ClInclude Include="..\..\..\libraries\FileIO\FileIn.h" />
     <ClInclude Include="..\..\..\libraries\Multiagent\IMultiagentSystem.h" />
     <ClInclude Include="..\..\..\libraries\Multiagent\MultiagentNE.h" />
     <ClInclude Include="..\..\..\libraries\Planning\GridGraph.h" />
@@ -114,9 +112,6 @@
     <ClInclude Include="..\..\..\libraries\SingleAgent\IPolicy.h" />
     <ClInclude Include="..\..\..\libraries\SingleAgent\NeuralNet\NeuralNet.h" />
     <ClInclude Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvo.h" />
-    <ClInclude Include="..\..\..\libraries\STL\easystl.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\libraries\Domains\IDomainStateful.cpp" />
@@ -129,6 +124,7 @@
     <ClCompile Include="..\..\..\libraries\Domains\UTM\Sector.cpp" />
     <ClCompile Include="..\..\..\libraries\Domains\UTM\UAV.cpp" />
     <ClCompile Include="..\..\..\libraries\Domains\UTM\UTMDomainAbstract.cpp" />
+    <ClCompile Include="..\..\..\libraries\FileIO\FileIn.cpp" />
     <ClCompile Include="..\..\..\libraries\Math\easymath.cpp" />
     <ClCompile Include="..\..\..\libraries\Math\MatrixTypes.cpp" />
     <ClCompile Include="..\..\..\libraries\Multiagent\IMultiagentSystem.cpp" />

@@ -25,20 +25,11 @@
     <Filter Include="Header Files\Simulation">
       <UniqueIdentifier>{f2100b57-9b33-4ac2-b594-34d52f7242a7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Assistants">
-      <UniqueIdentifier>{559395e6-d506-4a23-a618-e69a319715da}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\libraries\SingleAgent\NeuroEvo\NeuroEvo.h">
       <Filter>Header Files\Learning</Filter>
     </ClInclude>
@@ -72,9 +63,6 @@
     <ClInclude Include="..\..\..\libraries\Multiagent\IMultiagentSystem.h">
       <Filter>Header Files\Learning</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\libraries\Math\easymath.h">
-      <Filter>Header Files\Assistants</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\libraries\Planning\LinkGraph.h">
       <Filter>Header Files\Planning</Filter>
     </ClInclude>
@@ -84,20 +72,11 @@
     <ClInclude Include="..\..\..\libraries\Domains\UTM\UTMModesAndFiles.h">
       <Filter>Header Files\Domain</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\libraries\Math\MatrixTypes.h">
-      <Filter>Header Files\Assistants</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\libraries\Domains\UTM\Link.h">
       <Filter>Header Files\Domain</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\libraries\Planning\RAGS.h">
       <Filter>Header Files\Planning</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\libraries\Math\XY.h">
-      <Filter>Header Files\Assistants</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\libraries\STL\easystl.h">
-      <Filter>Header Files\Assistants</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\libraries\Domains\UTM\IAgentManager.h">
       <Filter>Header Files\Learning</Filter>
@@ -126,6 +105,9 @@
     <ClInclude Include="..\..\..\libraries\SingleAgent\IPolicy.h">
       <Filter>Header Files\Learning</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\libraries\FileIO\FileIn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -133,9 +115,6 @@
     </ClCompile>
     <ClCompile Include="IROS2015.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\libraries\Math\easymath.cpp">
-      <Filter>Header Files\Assistants</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\libraries\Domains\UTM\Fix.cpp">
       <Filter>Header Files\Domain</Filter>
@@ -164,9 +143,6 @@
     <ClCompile Include="..\..\..\libraries\Domains\UTM\UTMDomainAbstract.cpp">
       <Filter>Header Files\Domain</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\libraries\Math\MatrixTypes.cpp">
-      <Filter>Header Files\Assistants</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\libraries\Domains\UTM\Link.cpp">
       <Filter>Header Files\Domain</Filter>
     </ClCompile>
@@ -193,6 +169,15 @@
     </ClCompile>
     <ClCompile Include="..\..\..\libraries\Planning\GridGraph.cpp">
       <Filter>Header Files\Planning</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\libraries\Math\easymath.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\libraries\Math\MatrixTypes.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\libraries\FileIO\FileIn.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -113,15 +113,33 @@ void abstract_UTM_simulation(UTMModes* modes, int r) {
     delete MAS;
 }
 
+void abstract_UTM_simulation_difference(UTMModes* modes, int r) {
+    UTMDomainAbstract* domain = new UTMDomainAbstract(modes);
+
+    size_t n_inputs = domain->n_state_elements;        // # nn inputs
+    size_t n_outputs = domain->n_control_elements;     // # nn outputs
+    NeuroEvoParameters* NE_params;
+    NE_params = new NeuroEvoParameters(n_inputs, n_outputs);
+
+    size_t n_agents = domain->n_agents;
+    MultiagentNE* MAS = new MultiagentNE(n_agents, NE_params);
+
+    SimNE sim(domain, MAS);
+   // sim.runExperimentDifference();
+    sim.runExperiment();
+    sim.outputMetricLog("metrics.csv", r);
+
+    delete domain;
+    delete NE_params;
+    delete MAS;
+}
+
 void loopOverDomainParameters(void modeChanger(UTMModes*, int val),
     int nparams, UTMModes* modes) {
     vector<int> vals = consecutive(0, nparams - 1);  // meant for use with enums
     for (int val : vals) {
         for (int r = 0; r < 10; r++) {
             printf("RUN %i STARTING \n", r);
-            // srand(size_t(time(NULL)));
-            // srand(1);
-
             modeChanger(modes, val);
             abstract_UTM_simulation(modes,r);
         }
@@ -197,10 +215,12 @@ int _tmain(int, _TCHAR*) {
 #else
 int main() {
 #endif
-   int n_domains = 1;
+    UTMModes* params = new UTMModes();
+    abstract_UTM_simulation_difference(params,0);
+   //int n_domains = 1;
     //int n_domains = 100;
     //generateNewDomains(n_domains);
-    loopOverDomains(n_domains);
+    //loopOverDomains(n_domains);
     //loopOverRewardTypes();
     //detailedSim();
     _CrtDumpMemoryLeaks();  // memory leak checking
