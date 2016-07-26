@@ -165,30 +165,27 @@ void loopOverDomains(int n_domains) {
     loopOverDomainParameters(domainChanger, n_domains, params);
     delete params;
 }
-/*
-void detailedSim() {
+
+void detailedSim(UTMModes* modes) {
     srand(size_t(time(NULL)));
-    UTMModes* modes = new UTMModes();
     UTMDomainDetail* domain = new UTMDomainDetail(modes);
 
-    int nn_inputs = domain->n_state_elements;
-    int nn_outputs = domain->n_control_elements;
+    int n_inputs = domain->n_state_elements;
+    int n_outputs = domain->n_control_elements;
     NeuroEvoParameters* NE_params;
-    NE_params = new NeuroEvoParameters(nn_inputs, nn_outputs);
+    NE_params = new NeuroEvoParameters(n_inputs, n_outputs);
 
     int n_agents = domain->n_agents;
     int n_types = domain->n_types;
-    MultiagentTypeNE::TypeHandling  t_mode = MultiagentTypeNE::BLIND;
-    MultiagentTypeNE* MAS;
-    MAS = new MultiagentTypeNE(n_agents, NE_params, t_mode, n_types);
+    MultiagentNE* MAS = new MultiagentNE(n_agents, NE_params);
 
-    SimTypeNE sim(domain, MAS, MultiagentTypeNE::BLIND);
+    SimNE sim(domain, MAS);
     sim.runExperiment();
 
     sim.outputMetricLog("detailsim.csv");
     delete domain;
     delete modes;
-}*/
+}
 
 /*
 void generateNewDomains(int n_domains) {
@@ -222,7 +219,7 @@ int main() {
     //generateNewDomains(n_domains);
     //loopOverDomains(n_domains);
     //loopOverRewardTypes();
-    //detailedSim();
+    //detailedSim(params);
     _CrtDumpMemoryLeaks();  // memory leak checking
     std::system("pause");
     return 0;
